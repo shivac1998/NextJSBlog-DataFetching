@@ -24,7 +24,6 @@ const ArtworkDetail = ({ artwork }) => {
       <h1>{artwork.title}</h1>
       <p>ID: {artwork.id}</p>
       <p>Score: {artwork._score}</p>
-      {/* Add more artwork details as needed */}
       <div>
         <Link href="/">Return Home</Link>
       </div>
@@ -50,7 +49,7 @@ export async function getServerSideProps(context) {
     if (data.data.length > 0) {
       return {
         props: {
-          artwork: data.data[0], // Get the first artwork
+          artwork: data.data[0], 
         },
       };
     } else {

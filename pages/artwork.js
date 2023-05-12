@@ -35,7 +35,7 @@ const Artwork = () => {
     e.preventDefault();
     if (searchTerm) {
       // Redirect to the dynamic art page with the search term as the parameter
-      window.location.href = `/artwork/${encodeURIComponent(searchTerm)}`;
+      window.location.href = `/artwork/${searchTerm}`;
     }
   };
 
@@ -45,7 +45,7 @@ const Artwork = () => {
       <form onSubmit={handleSearch}>
         <input
           type="text"
-          value={searchTerm}
+          // value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           placeholder="Enter artwork title"
         />
