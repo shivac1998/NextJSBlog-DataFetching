@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
-const Artwork = () => {
+const Artworks = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [artwork, setArtwork] = useState(null);
 
@@ -35,7 +35,7 @@ const Artwork = () => {
     e.preventDefault();
     if (searchTerm) {
       // Redirect to the dynamic art page with the search term as the parameter
-      window.location.href = `/artwork/${searchTerm}`;
+      window.location.href = `/artworks/${searchTerm}`;
     }
   };
 
@@ -72,4 +72,4 @@ const Artwork = () => {
   );
 };
 
-export default Artwork;
+export default Artworks;
